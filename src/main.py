@@ -10,7 +10,7 @@ async def hello(ctx):
 
 @bot.command(aliases=["command", "cmd", "Commands", "Command", "Cmd"])
 async def commands(ctx):
-    await ctx.send("List of commands:```\n!hello\n!help\n!search gamename (aliases: !find gamename)\n!set gamename (aliases: !setgame gamename !set_game gamename)\n!stalk player alt1 alt2 ...```Source code:<https://github.com/mateusfavarin/PlaytimeStalkerBot/blob/main/README.md>")
+    await ctx.send("List of commands:```\n!hello\n!help\n!search gamename (aliases: !find gamename)\n!set gamename (aliases: !setgame gamename !set_game gamename)\n!stalk player alt1 alt2 ...\n!code```Source code: <https://github.com/mateusfavarin/PlaytimeStalkerBot/blob/main/README.md>")
 
 @bot.command(aliases=["find", "Search", "Find"])
 async def search(ctx, *args):
@@ -20,9 +20,13 @@ async def search(ctx, *args):
 async def set_game(ctx, *args):
     await ctx.send(exo.set_game(args))
 
-@bot.command(aliases="Stalk")
+@bot.command(aliases=["Stalk"])
 async def stalk(ctx, *args):
     await ctx.send(exo.stalk(args[0], args))
+
+@bot.command(aliases=["Source", "code", "Code"])
+async def source(ctx, *args):
+    await ctx.send("<https://github.com/mateusfavarin/PlaytimeStalkerBot/blob/main/README.md>")
 
 f = open(".TOKEN", "r")
 token = f.readline()

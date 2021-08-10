@@ -12,3 +12,4 @@ Clone this repository, replace your bot token in the file `src/.TOKEN` and run t
 * `!find gamename` - searches for the name of a game in exophase's database.
 * `!set gamename` - sets the current game that the bot will be using to stalk.
 * `!stalk player alt alt2 ...` - stalks the player's playtime and his alt accounts. Alt accounts are optinal.
+* `!code` - displays the link to this README hosted on GitHub.
